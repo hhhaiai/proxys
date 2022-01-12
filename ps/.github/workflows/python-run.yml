@@ -1,0 +1,48 @@
+name: Python Run
+
+on: [push]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.10.1
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.10.1
+    - name: Install dependencies
+      run: |
+        sudo chmod -R 777 /usr/lib/python3/dist-packages/
+        python3 -m pip install requests
+        python3 -m pip install xlsxwriter
+        python3 -m pip install bs4
+        python3 -m pip install beautifulsoup4
+        python3 -m pip install wheel
+        python3 -m pip install numpy
+        # python3 -m pip install cython
+        python3 -m pip install --no-binary pandas pandas
+        python3 -m pip install pandas
+        python3 -m pip install openpyxl
+        python3 -m pip install selenium
+        echo "install =======================setup.py"
+        # sudo python3 setup.py install
+    - name: Run
+      run: |
+        python3 getinfo_by_keywords.py
+
+#     - name: Install dependencies
+#       run: |
+#         conda env update --file environment.yml --name base
+#     - name: Lint with flake8
+#       run: |
+#         conda install flake8
+#         # stop the build if there are Python syntax errors or undefined names
+#         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+#         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+#         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+#     - name: Test with pytest
+#       run: |
+#         conda install pytest
+#         pytest

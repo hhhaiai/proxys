@@ -1,0 +1,9 @@
+# pack-refs with: peeled fully-peeled sorted 
+9ebb54af28dab930d44a70443be6ad1ab8daa693 refs/remotes/origin/dev
+00d438809cbb454228422da02da89e61039951c7 refs/remotes/origin/germey/add-env-prefix
+be7e3edf0028211c6e7e49d20ce9a9650d9b1d1d refs/remotes/origin/master
+8c98fd0be72e2f8a9ff4e2719475845b807147d0 refs/remotes/origin/release
+0a6f8922f310234038448241ab8ae84db9a4a72b refs/tags/20211230
+^43336d45c33b438d25886f6d8b4b9629fc29cf5e
+4a099bd318e8559e1f65a8ae05f6dd91a095c8e0 refs/tags/20220101
+^b1dd8b2cec27880c0f9b36569adc3eab6ae82185

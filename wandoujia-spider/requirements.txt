@@ -1,0 +1,7 @@
+# web framework
+requests
+loguru
+beautifulsoup4
+lxml
+html5lib
+scrapy
